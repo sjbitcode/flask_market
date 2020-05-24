@@ -1,0 +1,5 @@
+>>> OrderedItem.query.filter(OrderedItem.order_id != None).all()
+[<OrderedItem 3 - qty 1 @ product 4>, <OrderedItem 4 - qty 2 @ product 5>, <OrderedItem 5 - qty 2 @ product 3>, <OrderedItem 6 - qty 1 @ product 6>, <OrderedItem 7 - qty 2 @ product 7>, <OrderedItem 8 - qty 1 @ product 8>, <OrderedItem 10 - qty 1 @ product 1>]
+>>>
+>>> OrderedItem.query.filter(OrderedItem.order_id.isnot(None)).all()
+[<OrderedItem 3 - qty 1 @ product 4>, <OrderedItem 4 - qty 2 @ product 5>, <OrderedItem 5 - qty 2 @ product 3>, <OrderedItem 6 - qty 1 @ product 6>, <OrderedItem 7 - qty 2 @ product 7>, <OrderedItem 8 - qty 1 @ product 8>, <OrderedItem 10 - qty 1 @ product 1>]
